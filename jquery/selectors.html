@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1>Hello World</h1>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <a href="" title="" class="">Link</a> <!-- href,title, class. s.a. - sunt atribute -->
+        <input type="text" name="quantity" id="quantity">
+        <span id="msg"></span>
+    </header>
+    <div id="content" class="wrapper box">
+     <article>
+         <h2>Title</h2>
+         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem beatae dolorum
+              molestias inventore possimus quos quod, sunt quasi est vero!</p>
+     </article>
+     <article>
+         <h2>Title</h2>
+         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, quas.</p>
+     </article>
+    </div>
+    <footer>&copy; copyright 2019</footer>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+ <script>
+     /* $("#content").css("color", "red") */
+  /*    $(".wrapper").css("color", "red") */
+ /*  $("h1,h2").css("color", "red") */
+/*  $("article h2").css("color", "red") */ //toate h2 in article
+/* $("article").find("h2").css("color", "red") */ //toate h2 in article
+ /* $("h1 + p").css("color", "red")  *///toate paragrafele in fatsa carora sta h1
+/*  $("#content").prev().css("color", "red") */
+/* $("#content").next().css("color", "red") */
+/* $("*").css("color", "red") */
+/* $("article > h2").css("color", "red") */ //toate h2 in article
+/* $("article > *").css("color", "red") */
+/* $(".content").find("a.button") */
+/* $(".content a.button");
+$(".content h3.title");
+var $content = $(".content")
+$content.find("a.button");
+$content.find("h3.title"); */
+/* $(".content div input:disabled");
+$(".content div").find("input:disabled"); */
+/* $(".box").css({'color':'green',
+                'font-size': '12px',
+                'margin-left': '10px'}); */
+$(".box").css({color:'green',
+                fontSize: '12px',
+                marginLeft: '10px'});
+/* $("#content").css('height', function(i, value){
+    return parseFloat(value)*1,2;
+}); */
+/* $("#content").addClass('name')
+$("#content").removeClass('box') */
+/* $("#content").toggle()  */
+/* attr(attrName)
+attr(attrName, attrValue)
+removeattr(attrName)
+var altText = $('img').attr('alt')
+$('img').attr('src', '/img/default.jpg') */ //schimba calea imaginii
+/* $('a#my').attr({
+'href' : 'https://www.youtube.com/watch?v=eFrtW9O7Rtk&list=PLVfMKQXDAhGXQcouhIblV910Rv7lRscH3&index=3',
+'title' : 'Web Developer Blog'
+}) */
+$("a").click(function(event){
+    alert("Hello!")
+   /*  event.preventDefault();  *///sa nu mearga mai departe pe link
+    /* event.stopPropagation();  *///ca sa nu arate functiile pentru tot headerul dupa
+    return false;
+});
+/* $("header").click(function(event){
+    alert("Hello 2!!!!")
+}); */
+$('#quantity').keyup(function(){
+    var Value = $(this).val();
+    $('#msg').text(Value);
+})
+ </script>
+</body>
+</html>

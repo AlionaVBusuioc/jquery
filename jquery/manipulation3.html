@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <button id="getp">Paragraph</button>
+    <button id="getd">Document</button>
+    <button id="getw">Window</button>
+   <!--  <div>&nbsp;</div>  --><!-- probel -->
+   <div></div>
+    <p>Hello</p>
+    <p></p>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+     /*    function showHeight(element, height){
+          $("div").text("Height of the" +" " + element + " " + "is" +" " + height);
+        }
+        $("#getp").click(function(){
+          showHeight("paragraph", $("p").height());
+        });
+        $("#getd").click(function(){
+          showHeight("document", $(document).height());
+        });
+        $("#getw").click(function(){
+          showHeight("window", $(window).height());
+        }); */
+        var p = $("p:first");
+        $("p:last").text("innerHeight: " + p.innerHeight());
+    </script>
+</body>
+</html>

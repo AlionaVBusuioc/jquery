@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body{
+         background-color: #432131;
+         height: 2500px;
+         font-family: arial;
+         color: #fff;
+         padding: 0 50px;
+        }
+        h1{
+            padding: 30px;
+            font-size: 40px;
+            text-align: center;
+        }
+        .btn-top{
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 40px;
+            z-index: 99;
+            border: none;
+            outline: none;
+            background-color: #2ecc71;
+            color: #fff;
+            cursor: pointer;
+            padding: 15px 40px;
+            border-radius: 10px;
+        }
+        .btn-top:hover{
+            background-color: #27ae60;
+        }
+    </style>
+</head>
+<body>
+<button class="btn-top" title="Go to top">Top</button>
+<h1>Hello world</h1>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe sunt accusantium odio 
+   temporibus cumque nostrum vitae consectetur maxime quis recusandae. Accusamus libero,
+   reprehenderit, rem totam nisi numquam dolorum eveniet consequuntur dolorem ipsum dignissimos 
+   similique laudantium magni architecto omnis impedit facere nemo voluptatem? Error 
+   necessitatibus rem fugit odio eos voluptas sint voluptatum veritatis alias architecto? Rem 
+   tempora eligendi, voluptas eveniet dolor iure dolorem numquam eaque recusandae unde, tempore 
+   officiis magni nihil necessitatibus porro esse hic ab quis maiores. Expedita, est. Facilis 
+   cum quidem tempore maxime, excepturi enim architecto ullam dolores iusto molestiae, cumque 
+   officiis nesciunt asperiores ratione blanditiis corporis quae suscipit provident. Culpa quos 
+   veritatis unde, labore est autem aliquid? Ea tempore iusto, accusantium impedit soluta quidem 
+   repellat sunt nam minima aliquid explicabo voluptatem id molestias aspernatur officia maxime!
+   Quisquam, nesciunt. Delectus possimus odio rerum culpa nulla ullam perspiciatis alias 
+   adipisci numquam expedita sed, nemo earum non tenetur eveniet eaque nostrum beatae esse? Est 
+   praesentium enim quasi dolores iusto quis asperiores repellendus accusamus obcaecati ipsam, 
+   recusandae dolorum! Facilis voluptates consequatur consectetur quia dolorem neque repudiandae 
+   ducimus iste corrupti obcaecati! Possimus, deserunt culpa. Suscipit eos harum molestias nemo 
+   libero dicta consequatur id quae ducimus officiis ex nisi eius voluptatibus doloribus 
+   corrupti repellat, dolorem veniam reiciendis totam dolores debitis nam deserunt cumque 
+   quibusdam! Ipsum incidunt nihil odit consectetur, consequuntur nobis temporibus veritatis 
+   laudantium! Voluptas cumque soluta dolorem officia consequuntur, sunt, voluptates odio nulla 
+   optio mollitia vero repellat cum nam culpa aperiam delectus facilis tempore animi assumenda 
+   perspiciatis quod. Consequuntur debitis, dolor, illum quaerat at sunt voluptates quidem 
+   facere blanditiis ut cupiditate quam repellat. Sapiente quibusdam et quis vitae culpa id 
+   pariatur sit, a dignissimos perspiciatis nostrum esse nihil omnis voluptates deleniti 
+   numquam, aperiam neque dolorum ipsam voluptatum. Et maiores voluptas ut. Asperiores 
+   repudiandae voluptate explicabo, deleniti officiis ducimus amet exercitationem maiores? 
+   Pariatur iste qui alias ratione corrupti vitae ducimus recusandae necessitatibus quod 
+   explicabo laborum expedita dolorem veniam fugit optio, similique hic quasi? Cum earum id 
+   dignissimos? Autem facilis officia placeat. Laboriosam, impedit quibusdam. Culpa et at 
+   laboriosam est impedit quis, quidem modi tenetur iste, provident reprehenderit similique 
+   consectetur tempore. Beatae facilis rerum neque laboriosam deserunt. Expedita quasi, eaque 
+   voluptas voluptate molestias architecto suscipit quas placeat error deleniti obcaecati dolore
+   magni ipsum exercitationem et explicabo deserunt nobis tenetur labore, doloremque, neque 
+   veritatis! Voluptatem quod harum iure quae ratione blanditiis totam aut, nostrum quas omnis. 
+   Architecto quia laudantium tenetur dolor esse aliquid itaque ea ratione officia vitae iste 
+   nulla non cum beatae, ad dicta maxime consectetur facilis ullam laborum libero tempore minima. 
+   Modi culpa officiis similique, dolore eius rem asperiores non nihil saepe iusto. Et 
+   consequuntur nam illum facilis modi delectus mollitia rerum quis officia nulla ipsum 
+   doloremque fuga recusandae magni eligendi voluptates molestias qui ad eius quas iste, 
+   voluptatem provident! Error fugit nesciunt est sint dolorem assumenda corrupti eligendi 
+   facilis deserunt reprehenderit voluptatibus, esse voluptatum. Repellat deleniti laborum iste 
+   nobis aperiam et adipisci unde tempore corporis eligendi saepe voluptates, doloribus modi 
+   ducimus enim? Autem soluta quia dicta dolor nisi qui illo modi molestias atque?</p>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>  
+<script>
+var $btnTop = $(".btn-top")
+$(window).on("scroll", function(){
+ if($(window).scrollTop() >= 20){
+     $btnTop.fadeIn();
+ }else{
+    $btnTop.fadeOut();
+ }
+});
+
+$btnTop.on("click", function(){
+ $("html, body").animate({scrollTop:0}, 900)
+});
+</script>
+</body>
+</html>

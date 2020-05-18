@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+      @import url(http://fonts.googleapis.com/css?family=Open+Sans);
+      body{
+        font-family: 'Open Sans', 'sans-serif';
+        text-align: center;
+      }
+      .skillbar{
+        position: relative;
+        display: block;
+        margin-bottom: 15px;
+        width: 100%;
+        background: #eee;
+        height: 35px;
+        border-radius: 3px;
+        transition: 0.4s linear;
+        transition-property: width, background-color;
+      }
+      .skillbar-title{
+        position: absolute;
+        top: 0;
+        left: 0;
+        font-weight: bold;
+        font-size: 13px;
+        color: #fff;
+        background: #6adcfa;
+        border-top-left-radius: 3px;
+        border-bottom-left-radius: 3px;
+      }
+      .skillbar-title span{
+        display: block;
+        background: rgba(0,0,0,0.1);
+        padding: 0 20px;
+        height: 35px;
+        line-height: 35px;
+        border-top-left-radius: 3px;
+        border-bottom-left-radius: 3px;
+      }
+      .skillbar-bar{
+        height: 35px;
+        width: 0;
+        background: #6adcfa;
+        border-radius: 3px;
+      }
+      .skillbar-bar-percent{
+        position: absolute;
+        right: 10px;
+        top: 0;
+        font-size: 11px;
+        height: 35px;
+        line-height: 35px;
+        color: #444;
+        color: rgba(0,0,0,0.4)
+      }
+    </style>
+</head>
+<body>
+    <h1>My Skills</h1>
+    <div class="skillbar" data-percent="65%">
+      <div class="skillbar-title" style="background: #88cd2a;"><span>HTML5</span></div>
+      <div class="skillbar-bar" style="background: #88cd2a;"></div>
+      <div class="skillbar-bar-percent">65%</div>
+    </div>
+    <div class="skillbar" data-percent="85%">
+      <div class="skillbar-title" style="background: #00a8ff;"><span>CSS</span></div>
+      <div class="skillbar-bar" style="background: #00a8ff;"></div>
+      <div class="skillbar-bar-percent">85%</div>
+    </div>
+    <div class="skillbar" data-percent="75%">
+      <div class="skillbar-title" style="background: #243046;"><span>jQuery</span></div>
+      <div class="skillbar-bar" style="background: #243046;"></div>
+      <div class="skillbar-bar-percent">75%</div>
+    </div>
+    <div class="skillbar" data-percent="99%">
+      <div class="skillbar-title" style="background: #e7d465;"><span>JavaScript</span></div>
+      <div class="skillbar-bar" style="background: #e7d465;"></div>
+      <div class="skillbar-bar-percent">99%</div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+     $('.skillbar').each(function(){
+      $(this).find('.skillbar-bar').animate({
+        width:$(this).attr('data-percent')
+      }, 2000);
+     });
+    </script>
+</body>
+</html>

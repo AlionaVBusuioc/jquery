@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .accordion{
+            list-style-type: none;
+            border-top: 1px solid #ddd;
+            border-left: 1px solid #ddd;
+            border-right: 1px solid #ddd;
+            margin: 0.5rem 0 1rem 0;
+            padding-left: 0;
+            width: 30%;
+        }
+        .accordion-header{
+            background-color: #fff;
+            border-bottom: 1px solid #ddd;
+            cursor: pointer;
+            min-height: 3rem;
+            line-height: 3rem;
+            padding: 0 1rem;
+        }
+        .accordion-header:after{
+            content: '\02795'; /* \02795 -> simbolul + */
+            font-size: 0.6rem;
+            color: #777;
+            float: right;
+        }
+        .accordion-header.active:after{
+            content: '\02796'; /* \02796 -> simbolul - */
+        }
+        .accordion-body{
+            display: none;
+            padding: 1rem;
+            border-bottom: 1px solid #777;
+        }
+    </style>
+</head>
+<body>
+ <ul class="accordion" data-accordion="open">
+     <li>
+         <div class="accordion-header">First</div>
+         <div class="accordion-body">Lorem ipsum dolor sit amet.</div>
+     </li>
+     <li>
+        <div class="accordion-header">Second</div>
+        <div class="accordion-body">Lorem ipsum dolor sit amet.</div>
+    </li>
+     <li>
+         <div class="accordion-header">Third</div>
+         <div class="accordion-body">Lorem ipsum dolor sit amet.</div>
+     </li>
+ </ul>   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+     var accordion = function(){
+         var data = $(".accordion").attr("data-accordion");
+
+         $(".accordion-header").on("click", function(){
+             if (data === "close"){
+                 $(".accordion-body").slideUp();
+                 if ($(this).hasClass("active")){
+                     $(this).toggleClass("active");
+                 }
+                 else{
+                     $(".accordion-header").removeClass("active");
+                     $(this).toggleClass("active");
+                 }
+             }
+             else{
+                 $(this).toggleClass("active");
+             }
+             $(this).next(".accordion-body").not(":animated").slideToggle();
+         });
+     }
+     accordion();
+    </script>
+</body>
+</html>

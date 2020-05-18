@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .anim{
+            width: 100px;
+            height: 100px;
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Hello World</h1>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <div class="anim">
+        </div>
+        <article class="box" id="stick">
+            <h2 class="active" id="click">Article</h2>
+            <p style="display:none;" id="hide">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae totam excepturi 
+                dolorem saepe eum iure, illum quo illo labore numquam consequuntur quibusdam maiores
+                voluptates sed quas possimus? Eligendi, voluptatibus inventore reiciendis ullam nulla
+                perspiciatis excepturi non itaque corporis impedit sapiente consequuntur, harum deleniti 
+                sint tenetur quibusdam ipsam neque quia exercitationem? Accusantium, distinctio reiciendis 
+                dolores labore voluptatibus exercitationem suscipit aspernatur dolorum officia minus dolor 
+                voluptate modi vel enim autem molestias tenetur!
+            </p>
+        </article>
+    </header>
+    <div id="content" class="wrapper box">
+     <article>
+         <h2>Title</h2>
+         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem beatae dolorum
+              molestias inventore possimus quos quod, sunt quasi est vero!</p>
+     </article>
+     <article>
+         <h2>Title</h2>
+         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, quas.</p>
+     </article>
+    </div>
+    <footer>&copy; copyright 2019</footer>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+ <script>
+/* $(".anim").hide("slow") */
+/* $(".anim").hide("fast") */
+/* $(".anim").hide(800) */
+/* $(".anim").mouseover(function(){
+    $(this).hide("slow")
+}); */
+/* $(".anim").click(function(){
+    $(this).hide("slow")
+}); */
+/* $(".anim").hide('slow',function(){
+ alert("Hello!");
+}); */
+/* $('#stick').click(function(){
+ $("#hide").slideDown('slow');
+}); */
+function changeClass(){
+$(this).prev().toggleClass('active')}
+$(function(){
+$('article h2').click(function(){
+    $(this).next().slideToggle();
+    $(this).toggleClass('active');
+});
+});
+/* $(".anim").click(function(){ */
+/*  $(this).fadeOut(3000);
+ $(this).fadeIn(3000); */
+ /* $(this).fadeToggle(3000); */
+ /* $(this).fadeTo("slow", 0.4); */ //micsoreaza opacity pina la cit ii scrim noi
+/* }); */
+/* $(".anim").animate({
+    'opacity':'hide'
+}) */
+/* $(".anim").animate({
+    'opacity':'show'
+}) */
+/* $(".anim").animate({
+    'opacity':0.5,
+    'height':'50px',
+    'width':'250px'
+}) */
+/* $(".anim").animate({
+    'opacity':'-=0.3',
+    'height':'+=50px',
+    'width':'-=25px'
+}) */
+$(".anim").animate({
+    'height':'+=50px',
+})
+.animate({'width':'-=25px'},{queue:false})
+    /* .animate({'width':'-=25px'},{queue:false}).stop(); */ //.stop() -> opreste animatia
+   /*  jquery.fx.off = true; */ //deconecteaza animatia ->nu functioneaza
+
+ </script>

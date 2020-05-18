@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<h1>Hello world!</h1>
+<button id="btn-start">Vizualizeaza</button>
+<button id="btn-reset">Ascunde</button>
+<div>
+    <div id="message"></div>
+</div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        //inaintea expresiei se pune jquery sau $ (e echivalent)
+        /* jQuery("h1").css("color", "green"); */
+     /*    $("h1").css("color", "green"); */
+      /*   jQuery(document).ready(function(){
+            $("h1").css("color", "green");
+        }); */
+      /*   $(function(){
+         $("h1").css("color", "green");
+        }); */
+        /*  $("h1").html("New Text"); */
+        $('#btn-start').click(function(){
+         $("#message")
+          .html("Message")
+          .css("background-color", "green")
+          .parent()
+          .css("background-color", "fff4dd")
+          .width(150)
+          .height(80)
+        });
+        $('#btn-reset').click(function(){
+          location.reload();
+        });
+        $("h1").click(function(){
+             $("h1").css("color", "#a83261")
+        });
+      
+    </script>
+</body>
+</html>

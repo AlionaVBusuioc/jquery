@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        <header>
+                <h1>Hello World</h1>
+                <p>Lorem ipsum dolor sit amet.</p>
+                <a href="" title="" class="">Link</a> <!-- href,title, class. s.a. - sunt atribute -->
+                <input type="text" name="quantity" id="quantity">
+                <span id="msg"></span>
+            </header>
+            <div id="content" class="wrapper box">
+             <article>
+                 <h2>Title</h2>
+                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem beatae dolorum
+                      molestias inventore possimus quos quod, sunt quasi est vero!</p>
+             </article>
+             <article>
+                 <h2>Title</h2>
+                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, quas.</p>
+             </article>
+            </div>
+            <footer>&copy; copyright 2019</footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+      /*   var $myDiv = $('<div id="my" class="page"> Hello </div>').appendTo("body") */
+     /*  var $myDiv = $('<div id="my" class="page"> Hello </div>').appendTo("#content") */
+     /*  var $myDiv = $('<div>Hello</div>', {'id':'my', 'class': 'page'}).appendTo("#content"); */
+     /* var $myDiv = $('<div>Hello</div>').attr({'id':'my', 'class': 'page'}).appendTo("#content"); */
+     //JavaScript curat
+ /*     var myDiv = document.createElement('div');
+     myDiv.id ="my";
+     myDiv.className = "page"; */
+     /* $("p").after("<hr/>") */
+     /* $("<hr/>").insertAfter("p") */
+     /* $("<hr/>").insertBefore("p") */
+     /* $("p").append("<hr/>") */
+    /*  $("<p>Hello</p>").appendTo("#content") */ //plaseaza dedesubt
+    $("<p>Hello</p>").prependTo("#content") //plaseaza deasupra
+    </script>
+</body>
+</html>

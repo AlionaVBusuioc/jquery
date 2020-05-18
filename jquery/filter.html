@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
+</head>
+<body>
+        <table class="table" id="mydatatable">
+                <thead>
+                  <tr>
+                    <th scope="col">Transaction_id</th>
+                    <th scope="col">Date</th>
+                    <th scope="col">Debit_Amount</th>
+                    <th scope="col">Credit_Amount</th>
+                    <th scope="col">Sender</th>
+                    <th scope="col">Receiver</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>01.10.2019</td>
+                    <td>10 000</td>
+                    <td>-</td>
+                    <td>John</td>
+                    <td>Commercial Bank</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>02.10.2019</td>
+                    <td>15000</td>
+                    <td>-</td>
+                    <td>Sorin</td>
+                    <td>Commercial Bank</td>
+                  </tr>
+                  <th scope="row">3</th>
+                  <td>03.10.2019</td>
+                  <td>-</td>
+                  <td>1000</td>
+                  <td>Commercial Bank</td>
+                  <td>Grisa</td>
+                </tr>
+                <th scope="row">4</th>
+                <td>04.10.2019</td>
+                <td>25000</td>
+                <td>-</td>
+                <td>Gheorghe</td>
+                <td>Commercial Bank</td>
+              </tr>
+              <th scope="row">5</th>
+              <td>05.10.2019</td>
+              <td>-</td>
+              <td>5000</td>
+              <td>Commercial Bank</td>
+              <td>Grigorii</td>
+            </tr>
+            <th scope="row">6</th>
+            <td>06.10.2019</td>
+            <td>-</td>
+            <td>5000</td>
+            <td>Commercial Bank</td>
+            <td>Anton</td>
+          </tr>
+          <th scope="row">7</th>
+          <td>07.10.2019</td>
+          <td>20000</td>
+          <td>-</td>
+          <td>Ana</td>
+          <td>Commercial Bank</td>
+        </tr>
+        <th scope="row">8</th>
+        <td>08.10.2019</td>
+        <td>-</td>
+        <td>5000</td>
+        <td>Commercial Bank</td>
+        <td>Iulea</td>
+      </tr>
+      <th scope="row">9</th>
+      <td>08.10.2019</td>
+      <td>24000</td>
+      <td>-</td>
+      <td>Florin</td>
+      <td>Commercial Bank</td>
+    </tr>
+    <th scope="row">10</th>
+    <td>09.10.2019</td>
+    <td>11000</td>
+    <td>-</td>
+    <td>Valeriu</td>
+    <td>Commercial Bank</td>
+  </tr>
+  <th scope="row">11</th>
+  <td>09.10.2019</td>
+  <td>-</td>
+  <td>7000</td>
+  <td>Commercial Bank</td>
+  <td>Vasea</td>
+</tr>
+<th scope="row">12</th>
+<td>10.10.2019</td>
+<td>7000</td>
+<td>-</td>
+<td>Nastea</td>
+<td>Commercial Bank</td>
+</tr>
+<th scope="row">13</th>
+<td>10.10.2019</td>
+<td>-</td>
+<td>3000</td>
+<td>Commercial Bank</td>
+<td>Natalia</td>
+</tr>
+<th scope="row">14</th>
+<td>01.10.2019</td>
+<td>-</td>
+<td>5000</td>
+<td>Commercial Bank</td>
+<td>Stefan</td>
+</tr>                  
+</tbody>
+</table>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript">
+$(document).ready( function () {
+    $('#mydatatable').DataTable();
+} );
+</script>
+</body>
+</html>

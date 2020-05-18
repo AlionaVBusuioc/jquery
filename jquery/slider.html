@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body{
+            background: #2b2b2b;
+            display: flex;
+            font-family: Arial;
+        }
+        .slider{
+            width: 500px;
+            height: 300px;
+            margin: 100px auto;   /* auto - ca sa se situeze in centru */ 
+            position: relative;
+            top: 0;
+            left: 0;
+            right: 0;
+        }
+        .img{
+            text-align: center;
+            line-height: 300px;
+            position: absolute;
+            font-size: 50px;
+            color: #fff;
+            display: none;
+        }
+        .img.curry{
+            display: block;
+        }
+        .img:first-child{
+            width: 500px;
+            background: #CA0F1F;
+        }
+        .img:nth-child(2){
+            width: 500px;
+            background: #0ADD75;  
+        }
+        .img:nth-child(3){
+            width: 500px;
+            background: #0AB6DD;  
+        }
+        .img:nth-child(4){
+            width: 500px;
+            background: #FD7EDF;  
+        }
+        .img:nth-child(5){
+            width: 500px;
+            background: #BFBFBF;  
+        }
+        .n{
+         color:#575757;
+        }
+        a{
+            text-decoration: none;
+            color: #FD7EAD;
+            font-size: 20px;
+        }
+        a:hover{
+            color: #0AB6DD;
+        }
+        .prev{
+            position: relative;
+            top: 240px;
+            left: 300px;
+        }
+        .next{
+            position: relative;
+            top: 240px;
+            right: 300px;
+        }
+    </style>
+</head>
+<body>
+    <div class="prev n"><a href="#"> Prev </a></div>
+    <div class="slider">
+        <div class="img curry">1</div>
+        <div class="img">2</div>
+        <div class="img">3</div>
+        <div class="img">4</div>
+        <div class="img">5</div>
+    </div>
+    <div class="next n"><a href="#"> Next </a></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+     $(document).ready(function(){ //ready -deodata cum se incarca pagina
+       $('.next').click(function(){
+           var currentImage = $('.img.curry');
+           var currentImageIndex = $('.img.curry').index();
+           var nextImageIndex = currentImageIndex + 1; 
+           var nextImage = $('.img').eq(nextImageIndex);
+           currentImage.fadeOut(1000); //fadeOut(se ascunde, facindu-se transparent pina dispare)
+           currentImage.removeClass('curry');
+
+           if(nextImageIndex == ($('.img:last').index()+1)){
+               $('.img').eq(0).fadeIn(1000);
+               $('.img').eq(0).addClass('curry');
+           }else{
+               nextImage.fadeIn(1000);
+               nextImage.addClass('curry');
+           }
+       });
+       $('.prev').click(function(){
+        var currentImage = $('.img.curry');
+           var currentImageIndex = $('.img.curry').index();
+           var prevImageIndex = currentImageIndex - 1; 
+           var prevImage = $('.img').eq(prevImageIndex);
+           currentImage.fadeOut(1000);
+           currentImage.removeClass('curry');
+           prevImage.fadeIn(1000);
+           prevImage.addClass('curry');
+      });
+     });
+    </script>
+</body>
+</html>

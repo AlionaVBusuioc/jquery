@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body{
+            background: #f6f6f6;
+            width: 400px;
+            margin: 20px auto;
+            font: normal 13px/100% sans-serif;
+            color: #444;
+        }
+        div{
+            display: none;
+            padding: 10px;
+            border-width: 0 1px 1px 0;
+            border-style: solid;
+            border-color: #fff;
+            box-shadow: 0 1px 1px #ccc;
+            margin-bottom: 5px;
+            background-color: #f1f1f1;
+        }
+        a, a:visited{
+            color: #33739E;
+            text-decoration: none;
+            display: block;
+            margin: 10px 0;
+        }
+        #loadMore{
+            padding: 10px;
+            text-align: center;
+            background-color: #33739E;
+            color: #fff;
+            border-width: 0 1px 1px 0;
+            border-style: solid;
+            border-color: #fff;
+            box-shadow: 0 1px 1px #ccc;
+            transition: all 600ms ease-in-out;
+        }
+        #loadMore:hover{
+           background-color: #fff;
+           color: #33739E;
+        }
+    </style>
+</head>
+<body>
+    <div>"content"</div>
+    <div>"content"</div>
+    <div>"content"</div>
+    <div>"content"</div>
+    <div>"content"</div>
+    <div>"content"</div>
+    <div>"content"</div>
+    <div>"content"</div>
+    <div>"content"</div>
+    <div>"content"</div>
+    <div>"content"</div>
+    <div>"content"</div>
+    <div>"content"</div>
+    <div>"content"</div>
+    <div>"content"</div>
+    <div>"content"</div>
+    <div>"content"</div>
+    <div>"content"</div>
+    <div>"content"</div>
+    <div>"content"</div>
+    <a href="#" id="loadMore">Load More</a>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+    $(function(){
+    $("div").slice(0, 4).show(); //slice(0,4) -> se aleg primele 4 elemente - div-uri in cazul dat
+    $("#loadMore").on('click', function(e){
+     e.preventDefault(); // nu se va executa ideea de baza de ex. a - pentru link in cazul dat
+     $("div:hidden").slice(0, 4).slideDown();
+    });
+     });
+    </script>
+</body>
+</html>

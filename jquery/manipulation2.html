@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .hello{
+            background-color: green;
+        }
+        .first{
+            margin-left: 15px;
+        }
+        div{
+            padding: 15px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+            <h1>Hello World</h1>
+            <p>Lorem ipsum dolor sit amet.</p>
+    </header>
+    <p class="hello">Hello</p>
+    <button>Attach/detach</button>
+    <div class="container">
+        <div class="inner first">Hello</div>
+        <div class="inner second">Hello world</div>
+        <div class="inner third">Goodbye</div>
+    </div>
+    <div id="content" class="wrapper box">
+    <article>
+            <h2>Title</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem beatae dolorum
+                 molestias inventore possimus quos quod, sunt quasi est vero!</p>
+        </article>
+        <article>
+            <h2>Title</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, quas.</p>
+        </article>
+       </div>
+       <footer>&copy; copyright 2019</footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+     /* $(".second").replaceWith("<h2>New text</h2>"); */ //schimba continutul
+    /*  $("<h2>New text</h2>").replaceAll(".inner"); */ //schimba toate elementele cu clasa respectiva
+ /*     $(".inner").wrap("<div class='new'>Text</div>"); */
+ /* $(".inner").wrapAll("<div class='new'>Text</div>"); */
+ /* $(".inner").wrapInner("<div class='new'>Text</div>");  *///plaseaza in fatsa tuturor elementelor
+/*  $(".first").clone().appendTo(".third"); */
+/* var p;
+$("button").click(function(){
+if(p){
+    p.appendTo("header");
+    p = null;
+}else{
+    p = $(".hello").detach();
+}
+}); */
+/* $(".third").empty() */
+/* $(".third").remove() */
+/* var p = $(".first");
+var offset = p.offset();
+p.html("left:" + offset.left + ",top:" + offset.top); */
+/* $(".third").offset({top:10, left: 350}) */
+var p = $(".first");
+var position = p.position();
+p.html("left:" + position.left + ",top:" + position.top); //intoarce valorile fiecarei pozitii
+    </script>
+</body>
+</html>
